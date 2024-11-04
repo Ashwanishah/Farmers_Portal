@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<form action="" method="post">
+    {{form.hidden_tag()}}
+    <div>
+        <center>
+        {{form.Temparature.label}}
+        {{form.Temparature}}
+        {% if form.Temparature.errors %}
+            {% for error in form.Temparature.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+        </center>
+    </div>
+    <br>
+    <div>
+        {{form.Humidity.label}}
+        {{form.Humidity}}
+        {% if form.Humidity.errors %}
+            {% for error in form.Humidity.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Moisture.label}}
+        {{form.Moisture}}
+        {% if form.Moisture.errors %}
+            {% for error in form.Moisture.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Soil_Type.label}}
+        {{form.Soil_Type}}
+        {% if form.Soil_Type.errors %}
+            {% for error in form.Soil_Type.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Crop_Type.label}}
+        {{form.Crop_Type}}
+        {% if form.Crop_Type.errors %}
+            {% for error in form.Crop_Type.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Nitrogen.label}}
+        {{form.Nitrogen}}
+        {% if form.Nitrogen.errors %}
+            {% for error in form.Nitrogen.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Potassium.label}}
+        {{form.Potassium}}
+        {% if form.Potassium.errors %}
+            {% for error in form.Potassium.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{form.Phosphorous.label}}
+        {{form.Phosphorous}}
+        {% if form.Phosphorous.errors %}
+            {% for error in form.Phosphorous.errors %}
+                <div>{{error}}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{form.submit()}}</div>
+    <br>
+    <div>
+        {{output}}
+    </div>
+    <div>
+        <p>REDIRECT TO HOMEPAGE? <a href="{{url_for('home')}}">HOME</a></p>
+    </div>
+</form>
+
+
+{% endblock content %}
