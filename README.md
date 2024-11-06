@@ -27,7 +27,7 @@ The Disease Prediction feature uses a Convolutional Neural Network (CNN) to iden
 - **Backend**: Python, Flask
 - **Machine Learning Libraries**: scikit-learn, TensorFlow/Keras for CNN
 - **Data Processing**: Pandas, NumPy
-- **Web Interface**: HTML, CSS, JavaScript
+- **Web Interface**: HTML, CSS
 
 ---
 
